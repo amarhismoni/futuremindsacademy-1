@@ -2,6 +2,7 @@
   "dependencies": {
     "@inquirer/prompts": "^6.0.1",
     "@types/node": "^22.7.6",
+    "express": "^4.21.1",
     "inquirer": "^12.0.0"
   }
 }
